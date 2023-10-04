@@ -5,7 +5,7 @@
 // "http://localhost:8888/comem-archidep-php-todo-exercise/", then BASE_URL
 // should be "/comem-archidep-php-todo-exercise/". If you are accessing the
 // application at "http://localhost:8888", then BASE_URL should be "/".
-define('BASE_URL', '/Exercices/ArchiDep/comem-archidep-php-todo-exercise/');
+define('BASE_URL', 'comem-archidep-php-todo-exercise/');
 
 // Database connection parameters.
 define('DB_USER', 'todolist');
@@ -77,7 +77,7 @@ if (isset($_POST['action'])) {
 /**
  * Select all tasks from the database.
  */
-$selectQuery = 'SELECT * FROM todo'; // Add your SQL query here
+$selectQuery = 'SELECT * FROM todo ORDER BY created_at DESC';
 $items = $db->query($selectQuery);
 ?>
 
